@@ -1,4 +1,4 @@
-export default function formInitialization(){
+const formInitialization = function formInitialization(){
     
 const form= document.querySelector('.form');
 const mail = document.getElementById('mail');
@@ -10,9 +10,8 @@ const errorBox = document.querySelector(".errorBox");
 const createBtn= document.querySelector('.createBtn');
 
 
-createBtn.addEventListener('click', (e) =>{
-   
-});
+
+
 
 //showError function
 const showErrorMessage = function showErrorMessage(input, message){
@@ -91,3 +90,4 @@ pass2.addEventListener('input', ()=>{
 })
 }
 
+formInitialization();
