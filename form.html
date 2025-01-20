@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormValidation</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="./form.js" defer></script>
+</head>
+<body>
+  <div class="formDiv">
+    <form class="form" novalidate>
+      <h3>GreenTake</h3>
+      <h2>Create account</h2>
+      <input 
+      type="email" 
+      placeholder="Email" 
+      id="mail" 
+      pattern="[a-zA-Z0-9._%+\-]+@(gmail\.com|yahoo\.com)" 
+      required
+      >  
+      <input type="text" placeholder="Country" id="country" pattern="^[A-Z]+$" required maxlength="3" minlength="2">
+      <input type="text" placeholder="Zip Code" id="zipCode" required minlength="5">
+      <input type="password" placeholder="Password" id="pass" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).+$" required minlength="8">
+      <input type="password" placeholder="Confirm Password" id="confirmPass" required>
+      <button class="createBtn">Create account</button>
+      <span class="errorBox"></span>
+      <p class="termsParagraph">By creating an account with us you are agree to GreenTake <span class="greenLinks">Terms of Services</span> and <span class="greenLinks">Privacy Policy</span></p>
+      <p class="loginParagraph">Need an account? <span class="greenLinks">Login</span></p>
+    </form>  
+  </div>
+</body>
+</html>

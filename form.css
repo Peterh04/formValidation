@@ -1,0 +1,228 @@
+:root{
+  --main-color-400: hsl(0,0%,100%);
+  --main-color-500: hsl(0, 0%, 90%);
+  --main-color-600: hsl(0,0%,70%);
+  
+  --secondary-color-100:hsl(87, 81%, 75%);
+  --secondary-color-200:hsl(87, 60%, 63%);
+  --secondary-color-400:hsl(86.67,49.54%,57.25%);
+  --secondary-color-600:hsl(87, 44%, 54%);
+  --secondary-color-700:hsl(87, 36%, 30%);
+  --secondary-color-800:hsl(87, 83%, 20%);
+
+  --button-txt-color-100 : hsl(140, 8%, 36%);
+  --button-txt-color-200 : hsl(135, 7%, 22%);
+  --button-txt-color-400 : hsl(137.14,7.87%,17.45%);
+  --button-txt-color-600 : hsl(135, 9%, 9%);
+
+  --heading-color-100: hsl(0, 0%, 36%);
+  --heading-color-200: hsl(0, 0%, 21%);
+  --heading-color-400: hsl(0,0%,11.37%);
+  --heading-color-600: hsl(0, 0%, 9%);
+
+
+  --margin-top-main: 40px;
+  --margin-top-sec: 12px;
+}
+
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+body{
+  display: flex;
+  height: 100vh;
+
+  background-image: url(./assets/forest.jpg);
+  background-size: cover;
+  background-position: center;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/*form div styling*/
+
+.formDiv{
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  left: 350px;
+
+  height:80%;
+  width: 35%;
+
+  background-color: var(--main-color-400);
+  z-index: 100;
+
+  border-radius: 30px;
+
+  align-items: center;
+
+
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  
+
+  margin-top: 50px;
+}
+
+.form h3{
+  margin-right: 70px;
+
+  font-weight: bold;
+}
+
+.form h2{
+  color: var(--button-txt-color-400);
+
+  font-size: 2rem;
+
+  width: 30%;
+  line-height: 90%;
+
+
+  margin-top: var(--margin-top-main);
+  margin-bottom: var(--margin-top-sec);
+
+}
+
+
+.form input{
+  height: 40px;
+  width: 60%;
+  
+  border: 1px solid gray;
+  border-radius: 20px;
+
+  padding: 20px;
+
+  margin-top: var(--margin-top-sec);
+}
+
+
+
+/*Validation css on individual elements */
+form input:invalid{
+  border: 1px solid red;
+}
+
+form input:valid{
+  border:  1px solid var(--secondary-color-100);
+}
+
+
+.form button{
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  height: 40px;
+  width: 60%;
+  
+  border: none;
+  border-radius: 20px;
+
+  background: var(--secondary-color-400);
+
+  padding: 20px;
+
+  margin-top: var(--margin-top-sec);
+
+
+  font-weight: bolder;
+  color: var(--secondary-color-800);
+  
+}
+
+
+.form button:hover{
+  cursor: pointer;
+
+  background: var(--secondary-color-200);
+}
+
+
+.form .greenLinks{
+  color: var(--secondary-color-200);
+
+}
+
+.form .greenLinks:hover{
+  cursor: pointer;
+
+  color: var(--secondary-color-700);
+  
+}
+
+
+
+.termsParagraph{
+  width: 65%;
+
+  margin-top: var(--margin-top-main);
+}
+
+.loginParagraph{
+  margin-top: var(--margin-top-main);
+}
+
+.errorBox{
+  visibility: visible;
+}
+
