@@ -12,6 +12,7 @@
     <form class="form" novalidate>
       <h3>GreenTake</h3>
       <h2>Create account</h2>
+      <label for="mail">Email</label>
       <input 
       type="email" 
       placeholder="Email" 
@@ -19,9 +20,13 @@
       pattern="[a-zA-Z0-9._%+\-]+@(gmail\.com|yahoo\.com)" 
       required
       >  
+      <label for="country">Country</label>
       <input type="text" placeholder="Country" id="country" pattern="^[A-Z]+$" required maxlength="3" minlength="2">
+      <label for="zipCode">Zip Code</label>
       <input type="text" placeholder="Zip Code" id="zipCode" required minlength="5">
+      <label for="pass">Password</label>
       <input type="password" placeholder="Password" id="pass" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).+$" required minlength="8">
+      <label for="confirmPass">Confirm Password</label>
       <input type="password" placeholder="Confirm Password" id="confirmPass" required>
       <button class="createBtn">Create account</button>
       <span class="errorBox"></span>
